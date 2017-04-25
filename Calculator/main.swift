@@ -14,7 +14,7 @@ func printCalculatorMenu() {
 }
 
 // Create an instance of the CommandLineHelper class.
-var helperOne = CommandLineHelper(username: "Mr. Gordon")
+var helperOne = CommandLineHelper(username: "Ryan")
 
 // Be greeted
 helperOne.greeting()
@@ -40,7 +40,21 @@ if selection == 1 {
     result = myCalculator.add(this: x, that: y)
     
 } else if selection == 2 {
+    var x = helperOne.getDoubleInput(with: "What is the first value? ")
+    var y = helperOne.getDoubleInput(with: "What is the second value? ")
     
+    result = myCalculator.subtract(this: x, that: y)
+} else if selection == 3 {
+    var x = helperOne.getDoubleInput(with: "What is the first value? ")
+    var y = helperOne.getDoubleInput(with: "What is the second value? ")
+    
+    result = myCalculator.multiply(this: x, that: y)
+} else if selection == 4 {
+    var x = helperOne.getDoubleInput(with: "What is the first value? ")
+    var y = helperOne.getDoubleInput(with: "What is the second value? ")
+    
+    result = myCalculator.divide(this: x, that: y)
+
 }
 
 // Print the result
